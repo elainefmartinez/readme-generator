@@ -1,17 +1,16 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
-
-
 const fs = require('fs');
+const generateMarkdown = require('./utils/generateMarkdown.js');
 
 // TODO: Create an array of questions for user input
 const questions = [
     {
         type: 'input',
         message: 'What is your projects title?',
-        name: 'project title',
+        name: 'title',
     },
-    {
+   {
         type: 'input',
         message: 'Enter project description',
         name: 'description',
@@ -19,22 +18,22 @@ const questions = [
     {
         type: 'input',
         message: 'Table of Contents?',
-        name: 'Table of Contents',
+        name: 'table of contents',
     },
     {
         type: 'input',
         message: 'Installation Instructions?',
-        name: 'Installation',
+        name: 'installation',
     },
     {
         type: 'input',
         message: 'Project Usage?',
-        name: 'Usage',
+        name: 'usage',
     },
     {
         type: 'list',
         message: 'License?',
-        name: 'License',
+        name: 'license',
         choices:['MIT','GPLv2','Apache 2.0'],
         
 
@@ -42,12 +41,12 @@ const questions = [
     {
         type: 'input',
         message: 'Contributions?',
-        name: 'Contributing',
+        name: 'contributions',
     },
     {
         type: 'input',
         message: 'Test?',
-        name: 'Tests',
+        name: 'tests',
     },
     {
         type: 'input',
@@ -65,18 +64,28 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    return inquirer.prompt(questions)
-    .then((data) => {
-        console.log(data)
-        return data
-    })
-    .catch((error) =>{
-        console.log(error)
-    })
+    fs.writeFile(fileName, data, (err) => {
+        if (err) {
+            return console.log(err);
+        }
+
+        console.log("Successful!")
+    });
 }
 
 // TODO: Create a function to initialize app
-//function init() {}
+function init() {
+    //prompt the questions
+    inquirer
+        .prompt(questions)
+        .then(function (input) {
+            writeToFile("README.md", generateMarkdown(input));
+            //return data
+        });
+        
+    //store input
+    //use data to create new file
+};
 
 // Function call to initialize app
-//init();*/
+init();
