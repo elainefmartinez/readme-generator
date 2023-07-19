@@ -1,28 +1,29 @@
 
-# Read me project
+# README generator
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
-User an create a read me file
+User will answer series of questions to create a README.md file for project
 
 ---
 ## Contents
 - [Description](#description)
-- [Installation](#instllation)
-- [Usage](#usuage)
+- [Installation](#installation)
+- [Usage](#usage)
 - [Contributing](#contributing)
+- [Tests](#tests)
 - [License](#license)
 - [Questions](#questions)
 
 
 
 ## Installation:
-NA
+node js
 
 ---
 
-## Usage
+## Usage:
 NA
 
 ---
@@ -32,9 +33,16 @@ NA
 
 ---
 
+## Tests:
+Pass
+
+---
+
 ## Questions:
-Github: git
-Contact via Email:elaine
+
+Github: <http:github.com/elainefmartinez>
+
+Contact via Email: elainefmartinez6@gmail.com
 
  ## License
 This application uses license MIT

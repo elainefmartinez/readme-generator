@@ -46,9 +46,10 @@ ${data.description}
 ---
 ## Contents
 - [Description](#description)
-- [Installation](#instllation)
-- [Usage](#usuage)
+- [Installation](#installation)
+- [Usage](#usage)
 - [Contributing](#contributing)
+- [Tests](#tests)
 ${renderLicenseLink(data.license)}
 - [Questions](#questions)
 
@@ -59,7 +60,7 @@ ${data.installation}
 
 ---
 
-## Usage
+## Usage:
 ${data.usage}
 
 ---
@@ -69,9 +70,16 @@ ${data.contributing}
 
 ---
 
+## Tests:
+${data.tests}
+
+---
+
 ## Questions:
-Github:${data.github}
-Contact via Email:${data.email}
+
+Github: <http:github.com/${data.github}>
+
+Contact via Email: ${data.email}
 
 ${renderLicenseSection(data.license)}
 

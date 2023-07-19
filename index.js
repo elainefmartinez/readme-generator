@@ -15,11 +15,7 @@ const questions = [
         message: 'Enter project description',
         name: 'description',
     },
-    {
-        type: 'input',
-        message: 'Table of Contents?',
-        name: 'table of contents',
-    },
+    
     {
         type: 'input',
         message: 'Installation Instructions?',
@@ -50,12 +46,12 @@ const questions = [
     },
     {
         type: 'input',
-        message: 'For questions(email)?',
+        message: 'Email?',
         name: 'email',
     },
     {
         type: 'input',
-        message: 'For questions(github)?',
+        message: 'Git contact?',
         name: 'github',
     }
 
