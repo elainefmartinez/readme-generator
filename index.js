@@ -34,14 +34,14 @@ const questions = [
         type: 'list',
         message: 'License?',
         name: 'license',
-        choices:['MIT','GPLv2','Apache 2.0'],
+        choices:['MIT','GPLv2','Apache','None'],
         
 
     },
     {
         type: 'input',
-        message: 'Contributions?',
-        name: 'contributions',
+        message: 'Contributing?',
+        name: 'contributing',
     },
     {
         type: 'input',
